@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audique</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo-section">
+
+                <img src="assets/logo.png" alt="Audique Logo" class="logo">
+
+                <h1>Audique</h1>
+
+                <p>Feel The Music</p>
+
+            </div>
+
+            <div class="search-box">
+
+                <i class="fas fa-search"></i>
+
+                <input type="text"
+                    id="searchInput"
+                    placeholder="Search songs...">
+
+            </div>
+
+            <div class="menu">
+
+                <h3>Library</h3>
+
+                <button class="menu-btn active" id="allSongsBtn">
+                    <i class="fas fa-music"></i>
+                    All Songs
+                </button>
+
+                <button class="menu-btn" id="favoritesBtn">
+                    <i class="fas fa-heart"></i>
+                    Favorites
+                </button>
+
+                <button class="menu-btn" id="recentBtn">
+                    <i class="fas fa-clock"></i>
+                    Recently Played
+                </button>
+
+                <button class="menu-btn" id="downloadedBtn">
+                    <i class="fas fa-download"></i>
+                    Downloaded Songs
+                </button>
+
+            </div>
+
+            <div class="playlist-section">
+
+                <div class="playlist-header">
+
+                    <h3>Playlists</h3>
+
+                    <button id="createPlaylistBtn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+
+                </div>
+
+                <div id="playlistContainer">
+
+                </div>
+
+            </div>
+
+            <div class="upload-section">
+
+                <button id="addSongsBtn">
+
+                    <i class="fas fa-upload"></i>
+
+                    Upload Songs
+
+                </button>
+
+                <input
+                    type="file"
+                    id="songUploader"
+                    accept="audio/*"
+                    multiple
+                    hidden>
+
+            </div>
+
+        </aside>
+
+        <!-- SONG LIST -->
+
+        <section class="library-section">
+
+            <div class="library-header">
+
+                <h2 id="sectionTitle">
+                    All Songs
+                </h2>
+
+            </div>
+
+            <div id="songList" class="song-list">
+
+            </div>
+
+        </section>
+
+        <!-- PLAYER -->
+
+        <section class="player-section">
+
+            <div class="theme-toggle-top" id="themeBtn">
+                <i class="fas fa-moon"></i>
+            </div>
+
+            <div class="vinyl-wrapper">
+
+                <div class="vinyl-ring"></div>
+
+                <img
+                    src="covers/cover1.jpg"
+                    alt="cover"
+                    id="cover"
+                    class="cover">
+
+            </div>
+
+            <div class="song-info">
+
+                <h1 id="title">
+                    Midnight Drive
+                </h1>
+
+                <p id="artist">
+                    Audique Studio
+                </p>
+
+            </div>
+
+            <div class="player-actions">
+
+                <button id="favoriteSongBtn">
+                    <i class="fas fa-heart"></i>
+                </button>
+
+                <button id="shuffleBtn">
+                    <i class="fas fa-random"></i>
+                </button>
+
+                <button id="repeatBtn">
+                    <i class="fas fa-repeat"></i>
+                </button>
+
+            </div>
+
+            <div class="visualizer">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <div class="progress-container">
+
+                <span id="currentTime">
+                    0:00
+                </span>
+
+                <input
+                    type="range"
+                    id="progress"
+                    min="0"
+                    max="100"
+                    value="0">
+
+                <span id="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <div class="controls">
+
+                <button id="prevBtn">
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button id="playBtn" class="play-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <button id="nextBtn">
+                    <i class="fas fa-forward"></i>
+                </button>
+
+            </div>
+
+            <div class="volume-container">
+
+                <i class="fas fa-volume-up"></i>
+
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="1">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
